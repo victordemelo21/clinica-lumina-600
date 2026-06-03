@@ -1033,3 +1033,171 @@ a {
         flex-direction: column;
     }
 }
+
+/* =========================
+   PREMIUM POLISH - LUMINA 600
+   Paste at the bottom
+========================= */
+
+/* Navbar hover underline */
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -0.35rem;
+    width: 0;
+    height: 2px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--color-gold), var(--color-rose));
+    transform: translateX(-50%);
+    transition: width 220ms ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* =========================
+   LUMINA 600 BUTTON HOVER
+   Different from R$1000
+========================= */
+
+.nav-button,
+.button-primary {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid transparent;
+    transition:
+        transform 220ms ease,
+        box-shadow 220ms ease,
+        background 220ms ease,
+        color 220ms ease,
+        border-color 220ms ease;
+}
+
+.nav-button:hover,
+.button-primary:hover {
+    transform: translateY(-3px);
+    background: #fffaf4;
+    color: var(--color-dark);
+    border-color: rgba(184, 148, 95, 0.45);
+    box-shadow: 0 18px 42px rgba(184, 148, 95, 0.2);
+}
+
+/* Make feature cards feel more designed */
+.feature-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card::before {
+    content: "";
+    position: absolute;
+    top: -30%;
+    right: -30%;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(184, 148, 95, 0.18), transparent 70%);
+    opacity: 0;
+    transition: opacity 220ms ease, transform 220ms ease;
+}
+
+.feature-card:hover::before {
+    opacity: 1;
+    transform: scale(1.15);
+}
+
+/* Better icon/number circle */
+.feature-card-number,
+.journey-step span {
+    box-shadow: inset 0 0 0 1px rgba(184, 148, 95, 0.18);
+}
+
+/* Make service cards more premium */
+.service-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::after {
+    content: "";
+    position: absolute;
+    left: 1.45rem;
+    right: 1.45rem;
+    bottom: 0;
+    height: 3px;
+    border-radius: 999px 999px 0 0;
+    background: linear-gradient(90deg, var(--color-gold), var(--color-rose));
+    opacity: 0;
+    transform: translateY(4px);
+    transition: opacity 220ms ease, transform 220ms ease;
+}
+
+.service-card:hover::after {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Better image hover */
+.hero-image-card img,
+.services-image img,
+.experience-gallery img,
+.about-image-wrapper img {
+    transition: transform 700ms ease, filter 700ms ease;
+}
+
+.hero-image-card:hover img,
+.services-image:hover img,
+.experience-gallery img:hover,
+.about-image-wrapper:hover img {
+    transform: scale(1.045);
+    filter: saturate(1.08) contrast(1.04);
+}
+
+/* More premium gallery movement */
+.experience-gallery img {
+    transition: transform 260ms ease, box-shadow 260ms ease, filter 700ms ease;
+}
+
+.experience-gallery img:hover {
+    transform: translateY(-6px) scale(1.025);
+    box-shadow: var(--shadow-premium);
+}
+
+/* Stronger statement section */
+.statement {
+    position: relative;
+    overflow: hidden;
+}
+
+.statement::after {
+    content: "";
+    position: absolute;
+    inset: 1rem;
+    border: 1px solid rgba(255, 247, 236, 0.24);
+    border-radius: calc(var(--radius-xl) - 0.7rem);
+    pointer-events: none;
+}
+
+/* Remove demo feeling */
+.demo-note {
+    display: none;
+}
+
+.feature-icon {
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(145deg, rgba(184, 148, 95, 0.18), rgba(216, 181, 166, 0.22));
+    color: var(--color-gold-dark);
+    font-size: 1.25rem;
+    box-shadow: inset 0 0 0 1px rgba(184, 148, 95, 0.18);
+}
